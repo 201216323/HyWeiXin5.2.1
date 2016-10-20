@@ -1,0 +1,149 @@
+
+mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                Log.e(TAG, "position:" + position + "positionOffset:" + positionOffset + "positionOffsetPixels:" + positionOffsetPixels);
+				
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+			currentPosition = position;
+                resetTextView();
+                switch (position) {
+                    case 0:
+                      
+                        break;
+                    case 1:
+               
+                        break;
+                    case 2:
+                    
+                        break;
+                }
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+测试手机是魅族note3：1080*1920  
+打印出屏幕的宽数据：MainActivity: screenWidth：1080
+
+从第0页到第1页滑动时候onPageScrolled三个参数的变化：
+E/MainActivity: 	position:0			positionOffset:0.012037037		positionOffsetPixels:13
+E/MainActivity: 	position:0			positionOffset:0.025925925		positionOffsetPixels:27
+E/MainActivity: 	position:0			positionOffset:0.044444446		positionOffsetPixels:48
+E/MainActivity: 	position:0			positionOffset:0.060185187		positionOffsetPixels:65
+E/MainActivity: 	position:0			positionOffset:0.07777778		positionOffsetPixels:84
+E/MainActivity: 	position:0			positionOffset:0.09351852		positionOffsetPixels:101
+E/MainActivity: 	position:0			positionOffset:0.11481482		positionOffsetPixels:124
+E/MainActivity: 	position:0			positionOffset:0.13703704		positionOffsetPixels:148
+E/MainActivity: 	position:0			positionOffset:0.16203703		positionOffsetPixels:174
+E/MainActivity: 	position:0			positionOffset:0.19166666		positionOffsetPixels:207
+E/MainActivity: 	position:0			positionOffset:0.23148148		positionOffsetPixels:250
+E/MainActivity: 	position:0			positionOffset:0.27962962		positionOffsetPixels:302
+E/MainActivity: 	position:0			positionOffset:0.3314815		positionOffsetPixels:358
+E/MainActivity: 	position:0			positionOffset:0.38148147		positionOffsetPixels:412
+E/MainActivity: 	position:0			positionOffset:0.4287037		positionOffsetPixels:463
+E/MainActivity: 	position:0			positionOffset:0.46574074		positionOffsetPixels:503
+E/MainActivity: 	position:0			positionOffset:0.5388889		positionOffsetPixels:582
+E/MainActivity: 	position:0			positionOffset:0.6				positionOffsetPixels:648
+E/MainActivity: 	position:0			positionOffset:0.6574074		positionOffsetPixels:710
+E/MainActivity: 	position:0			positionOffset:0.70555556		positionOffsetPixels:762
+E/MainActivity: 	position:0			positionOffset:0.7509259		positionOffsetPixels:811
+E/MainActivity: 	position:0			positionOffset:0.78981483		positionOffsetPixels:853
+E/MainActivity: 	position:0			positionOffset:0.82222223		positionOffsetPixels:888
+E/MainActivity: 	position:0			positionOffset:0.8518519		positionOffsetPixels:920
+E/MainActivity: 	position:0			positionOffset:0.87777776		positionOffsetPixels:948
+E/MainActivity: 	position:0			positionOffset:0.8981481		positionOffsetPixels:969
+E/MainActivity: 	position:0			positionOffset:0.9175926		positionOffsetPixels:991
+E/MainActivity: 	position:0			positionOffset:0.9324074		positionOffsetPixels:1007
+E/MainActivity: 	position:0			positionOffset:0.9462963		positionOffsetPixels:1022
+E/MainActivity: 	position:0			positionOffset:0.9574074		positionOffsetPixels:1034
+E/MainActivity: 	position:0			positionOffset:0.96574074		positionOffsetPixels:1043
+E/MainActivity: 	position:0			positionOffset:0.97407407		positionOffsetPixels:1052
+E/MainActivity: 	position:0			positionOffset:0.97962964		positionOffsetPixels:1058
+E/MainActivity: 	position:0			positionOffset:0.98425925		positionOffsetPixels:1063
+E/MainActivity: 	position:0			positionOffset:0.98888886		positionOffsetPixels:1068
+E/MainActivity: 	position:0			positionOffset:0.9916667		positionOffsetPixels:1071
+E/MainActivity: 	position:0			positionOffset:0.99444443		positionOffsetPixels:1074
+E/MainActivity: 	position:0			positionOffset:0.9962963		positionOffsetPixels:1076
+E/MainActivity: 	position:0			positionOffset:0.99722224		positionOffsetPixels:1077
+E/MainActivity: 	position:0			positionOffset:0.99814814		positionOffsetPixels:1078
+E/MainActivity: 	position:0			positionOffset:0.9990741		positionOffsetPixels:1079
+从上面数据可以看出：position一直为0，positionOffset基本是从0到1，positionOffsetPixels基本也是从0到1像素（即手机屏幕的宽度）
+
+从第1页到第0页滑动时候onPageScrolled三个参数的变化：
+E/MainActivity: 	position:0			positionOffset:0.99814814		positionOffsetPixels:1078
+E/MainActivity: 	position:0			positionOffset:0.962037			positionOffsetPixels:1039
+E/MainActivity: 	position:0			positionOffset:0.9166667		positionOffsetPixels:990
+E/MainActivity: 	position:0			positionOffset:0.85833335		positionOffsetPixels:927
+E/MainActivity: 	position:0			positionOffset:0.73703706		positionOffsetPixels:796
+E/MainActivity: 	position:0			positionOffset:0.7314815		positionOffsetPixels:790
+E/MainActivity: 	position:0			positionOffset:0.63703704		positionOffsetPixels:688
+E/MainActivity: 	position:0			positionOffset:0.5148148		positionOffsetPixels:556
+E/MainActivity: 	position:0			positionOffset:0.40555555		positionOffsetPixels:438
+E/MainActivity: 	position:0			positionOffset:0.3101852		positionOffsetPixels:335
+E/MainActivity: 	position:0			positionOffset:0.23425926		positionOffsetPixels:253
+E/MainActivity: 	position:0			positionOffset:0.17685185		positionOffsetPixels:191
+E/MainActivity: 	position:0			positionOffset:0.1287037		positionOffsetPixels:139
+E/MainActivity: 	position:0			positionOffset:0.09351852		positionOffsetPixels:101
+E/MainActivity: 	position:0			positionOffset:0.06574074		positionOffsetPixels:71
+E/MainActivity: 	position:0			positionOffset:0.04537037		positionOffsetPixels:49
+E/MainActivity: 	position:0			positionOffset:0.02962963		positionOffsetPixels:32
+E/MainActivity: 	position:0			positionOffset:0.018518519		positionOffsetPixels:20
+E/MainActivity: 	position:0			positionOffset:0.012037037		positionOffsetPixels:13
+E/MainActivity: 	position:0			positionOffset:0.0064814813		positionOffsetPixels:6
+E/MainActivity: 	position:0			positionOffset:0.0037037036		positionOffsetPixels:4
+E/MainActivity: 	position:0			positionOffset:0.0018518518		positionOffsetPixels:2
+E/MainActivity: 	position:0			positionOffset:9.259259E-4		positionOffsetPixels:1
+从上面数据可以看出：position一直为0，positionOffset基本是从1到0，positionOffsetPixels基本也是从1080到0像素（即手机屏幕的宽度）
+
+从第1页到第2页滑动时候onPageScrolled三个参数的变化：
+E/MainActivity: 	position:1			positionOffset:0.024074078		positionOffsetPixels:26
+E/MainActivity: 	position:1			positionOffset:0.116666675		positionOffsetPixels:126
+E/MainActivity: 	position:1			positionOffset:0.28611112		positionOffsetPixels:309
+E/MainActivity: 	position:1			positionOffset:0.4342593		positionOffsetPixels:469
+E/MainActivity: 	position:1			positionOffset:0.5833334		positionOffsetPixels:630
+E/MainActivity: 	position:1			positionOffset:0.70000005		positionOffsetPixels:756
+E/MainActivity: 	position:1			positionOffset:0.79814816		positionOffsetPixels:862
+E/MainActivity: 	position:1			positionOffset:0.8694445		positionOffsetPixels:939
+E/MainActivity: 	position:1			positionOffset:0.91851854		positionOffsetPixels:992
+E/MainActivity: 	position:1			positionOffset:0.95000005		positionOffsetPixels:1026
+E/MainActivity: 	position:1			positionOffset:0.9722222		positionOffsetPixels:1050
+E/MainActivity: 	position:1			positionOffset:0.98518515		positionOffsetPixels:1064
+E/MainActivity: 	position:1			positionOffset:0.9925926		positionOffsetPixels:1072
+E/MainActivity: 	position:1			positionOffset:0.9972222		positionOffsetPixels:1077
+E/MainActivity: 	position:1			positionOffset:0.9990741		positionOffsetPixels:1079
+从上面数据可以看出：position一直为1，positionOffset基本是从0到1，positionOffsetPixels基本也是从0到1080像素（即手机屏幕的宽度）
+
+从第2页到第1页滑动时候onPageScrolled三个参数的变化：
+E/MainActivity: 	position:1			positionOffset:0.9333333		positionOffsetPixels:1007
+E/MainActivity: 	position:1			positionOffset:0.8472222		positionOffsetPixels:915
+E/MainActivity: 	position:1			positionOffset:0.7416667		positionOffsetPixels:801
+E/MainActivity: 	position:1			positionOffset:0.46018517		positionOffsetPixels:496
+E/MainActivity: 	position:1			positionOffset:0.3787037		positionOffsetPixels:409
+E/MainActivity: 	position:1			positionOffset:0.26296294		positionOffsetPixels:283
+E/MainActivity: 	position:1			positionOffset:0.17314816		positionOffsetPixels:187
+E/MainActivity: 	position:1			positionOffset:0.10925925		positionOffsetPixels:117
+E/MainActivity: 	position:1			positionOffset:0.06759262		positionOffsetPixels:73
+E/MainActivity: 	position:1			positionOffset:0.03888893		positionOffsetPixels:42
+E/MainActivity: 	position:1			positionOffset:0.021296263		positionOffsetPixels:22
+E/MainActivity: 	position:1			positionOffset:0.010185242		positionOffsetPixels:11
+E/MainActivity: 	position:1			positionOffset:0.004629612		positionOffsetPixels:4
+E/MainActivity: 	position:1			positionOffset:0.0018517971		positionOffsetPixels:1
+E/MainActivity: 	position:1			positionOffset:9.2589855E-4		positionOffsetPixels:0
+从上面数据可以看出：position一直为1，positionOffset基本是从1到0，positionOffsetPixels基本也是从1080到0像素（即手机屏幕的宽度）
+
+综上打印的数据，我们可以得到这样的结论：
+当ViewPager里面包含三个Fragment的时候，可以根据两个常量来判断ViewPager的滑动方向，这里需要用到onPageSelected方法中的position，
+定义此position=currentPosition,还有onPageScrolled方法中的position，如果currentPosition=0&&position=0此时ViewPager的滑动操作是
+从第0页到第1页，如果currentPosition=1&&position=0此时ViewPager的滑动操作是从第1页到第0页，如果currentPosition=1&&position=1此时ViewPager的滑动操作是
+从第1页到第2页，如果currentPosition=2&&position=1此时ViewPager的滑动操作是从第2页到第1页，至于positionOffset字段是在左滑的时候是从0到1变化，右滑的时候
+是从1到0，positionOffsetPixels字段是在左滑的时候是从0到1080（手机屏幕的宽度像素数）变化，右滑的时候是从1080到0，
+
+
+
