@@ -194,10 +194,10 @@ public class MainActivity extends FragmentActivity {
      * 重置颜色
      */
     protected void resetTextView() {
-        mLiaotian.setTextColor(getResources().getColor(R.color.black));
+        mLiaotian.setTextColor(getResources().getColor(R.color.black));//改变字体颜色
         mFaxian.setTextColor(getResources().getColor(R.color.black));
         mTongxunlu.setTextColor(getResources().getColor(R.color.black));
-        mBadgeViewforLiaotian.setVisibility(View.INVISIBLE);
+        mBadgeViewforLiaotian.setVisibility(View.INVISIBLE);////隐藏badgeView
         mBadgeViewforFaxian.setVisibility(View.INVISIBLE);
         mBadgeViewforTongxunlu.setVisibility(View.INVISIBLE);
 
